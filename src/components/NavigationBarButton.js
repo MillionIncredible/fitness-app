@@ -1,10 +1,19 @@
 import React from 'react';
 
 function NavigationBarButton() {
-    // const navigationBarButtons = ['Home', 'Browse', 'Profile'];
+    const navigationBarButtons = ['Home', 'Browse', 'Profile'];
 
     return (
-        <button type="button">Home</button>
+        navigationBarButtons.map((button) => 
+
+            <button type="button">{button}</button>
+            /*
+            <div>
+                <img src="images/home.svg" alt=""/>
+                <p>{button}</p>
+            </div>
+            */
+        )
     );
 }
 

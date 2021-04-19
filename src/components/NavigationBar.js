@@ -1,25 +1,24 @@
-// import React from 'react';
+import React from 'react';
 import styled from 'styled-components';
-// import NavigationBarButton from './NavigationBarButton';
+import NavigationBarButton from './NavigationBarButton';
 
-const NavigationBar = styled.div`
-   width: 100%;
+const StyledDiv = styled.div`
+   position: absolute;
+   display: flex;
+   width: 100vw;
    height: 5.0rem;
    background-color: var(--color-beige);
-   position: absolute;
    left: 0;
    bottom: 0;
    line-height: 5.0rem;
 `;
 
-/* function NavigationBar() {
+function NavigationBar() {
    return (
-      <div>
+      <StyledDiv>
          <NavigationBarButton />
-         <NavigationBarButton />
-         <NavigationBarButton />
-      </div>
+      </StyledDiv>
    );
-} */
+}
 
 export default NavigationBar;
