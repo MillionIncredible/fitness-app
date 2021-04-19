@@ -5,6 +5,7 @@ import NavigationBarButton from './NavigationBarButton';
 const StyledDiv = styled.div`
    position: absolute;
    display: flex;
+   justify-content: space-around;
    width: 100vw;
    height: 5.0rem;
    background-color: var(--color-beige);
