@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
     * {
         margin: 0;
         padding: 0;
@@ -64,7 +65,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background: var(--color-white);
+        ${'' /* background: var(--color-white); */}
         color: var(--color-blue-dark);
     }
 
@@ -95,6 +96,15 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1.6rem;
         line-height: 2.1rem;
     }
+
+    a {
+        text-decoration: 0;
+
+        &:visited {
+            color: var(--color-blue-dark);
+        }
+    }
+
 `;
  
 export default GlobalStyle;

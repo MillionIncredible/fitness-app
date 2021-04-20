@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import NavigationBarButton from './NavigationBarButton';
+import NavigationBarLink from './NavigationBarLink';
 
 const StyledDiv = styled.div`
-   position: absolute;
    display: flex;
    justify-content: space-around;
+   position: absolute;
    width: 100vw;
    height: 5.0rem;
    background-color: var(--color-beige);
@@ -17,7 +17,7 @@ const StyledDiv = styled.div`
 function NavigationBar() {
    return (
       <StyledDiv>
-         <NavigationBarButton />
+         <NavigationBarLink />
       </StyledDiv>
    );
 }
