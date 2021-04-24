@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
 
     * {
         margin: 0;
@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
         min-height: 100%;
         position: relative;
         font-size: 62.5%;
-        font-family: Montserrat;
+        font-family: 'Montserrat', sans-serif;
 
         /* Colors in Hex */
         --color-white: #FFFFFF;
@@ -65,8 +65,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        ${'' /* background: var(--color-white); */}
         color: var(--color-blue-dark);
+        margin-bottom: 75px;
     }
 
     h1 {  
@@ -104,7 +104,6 @@ const GlobalStyle = createGlobalStyle`
             color: var(--color-blue-dark);
         }
     }
-
 `;
  
 export default GlobalStyle;
