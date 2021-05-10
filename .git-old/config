@@ -1,0 +1,8 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[branch "master"]
+	remote = git@github.com:MillionIncredible/fitness-app.git
+	merge = refs/heads/master
