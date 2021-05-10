@@ -99,6 +99,7 @@ const GlobalStyle = createGlobalStyle`
 
     a {
         text-decoration: 0;
+        color: var(--color-blue-dark);
 
         &:visited {
             color: var(--color-blue-dark);

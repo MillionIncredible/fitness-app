@@ -1,18 +1,17 @@
 /* eslint-disable arrow-body-style */
 import React from 'react';
 import styled from 'styled-components';
-// import NavigationBar from './NavigationBar';
 
 const Div = styled.div`
     width: 99vw;
 `;
 
-const Profile = () => {
+const Register = () => {
    return (
       <Div>
-        <h2>Profile</h2>
+         <button type="button">registrieren</button>
       </Div>
    );
 }
 
-export default Profile;
+export default Register;

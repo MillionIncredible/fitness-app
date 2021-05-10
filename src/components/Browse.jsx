@@ -1,6 +1,9 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import styled from 'styled-components';
+import { useQuery, gql } from '@apollo/client';
 import HeartLogo from "../assets/Heart.svg";
+
 
 const Div = styled.div`
     width: 99vw;
@@ -54,9 +57,50 @@ const ProgrammDiv = styled.div`
    }
 `;
 
-function Browse() {
-   const programms = ['Head', 'Legs', 'Dance', 'Yoga', 'Aerobic', '100 Sit-Ups Challenge', '100 Push-Ups Challenge', 'ABS for Beginner', 'Booty and Legs', 'Full Body', 'Shoulders'];
-   programms.sort();
+const PROGRAMS = gql`
+  query GetPrograms {
+      allProgram {
+         title,
+         slug {
+            current
+         }
+      }
+   }
+`;
+
+
+const Browse = () => {
+   const { loading, error, data } = useQuery(PROGRAMS);
+   if (loading) return <p>Loading...</p>;
+   if (error) return <p>Error :(</p>;
+
+   const programsTitles = [];
+   // const programsSlugs = [];
+   data.allProgram.forEach(({ title/* , slug */}) => {
+      programsTitles.push(title);
+      // programsSlugs.push(slug.current);
+   });
+
+   programsTitles.sort((a, b) => {
+      if (a < b) {
+         return -1;
+      }
+      if (a > b) {
+         return 1;
+      }
+      return 0;
+   });
+
+   const programs = programsTitles.map((title) =>
+      <Link to={title}>
+         <ProgrammDiv>
+            <div className="test">
+               <img src={HeartLogo} alt="HeartLogo" />
+               <p>Neu</p>
+            </div>
+            <h2>{title}</h2>
+         </ProgrammDiv>
+      </Link>);
 
    return (
       <Div>
@@ -64,15 +108,7 @@ function Browse() {
             <h2>Browse</h2>
             <p>Filter</p>
          </div>
-        {programms.map((programm) => 
-            <ProgrammDiv>
-               <div className="test">
-                  <img src={HeartLogo} alt="HeartLogo" />
-                  <p>Neu</p>
-               </div>
-               <h2>{programm}</h2>
-            </ProgrammDiv>)
-         }
+         {programs}
       </Div>
    );
 }

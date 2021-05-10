@@ -1,3 +1,4 @@
+/* eslint-disable arrow-body-style */
 import React from 'react';
 import styled from 'styled-components';
 import WorkoutProgramm from "../assets/WorkoutProgramm.svg";
@@ -40,7 +41,7 @@ const Div = styled.div`
     }
 `;
 
-function WorkoutOfTheDay() {
+const WorkoutOfTheDay = () => {
     return (
         <Div>
             <div className="headingContainer">

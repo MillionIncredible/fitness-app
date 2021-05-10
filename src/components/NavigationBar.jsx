@@ -1,3 +1,4 @@
+/* eslint-disable arrow-body-style */
 import React from 'react';
 import styled from 'styled-components';
 import NavigationBarLink from './NavigationBarLink';
@@ -15,7 +16,7 @@ const Div = styled.div`
    overflow: hidden;
 `;
 
-function NavigationBar() {
+const NavigationBar = () => {
    return (
       <Div>
          <NavigationBarLink />

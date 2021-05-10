@@ -47,7 +47,7 @@ const Div = styled.div`
     }
 `;
 
-function NavigationBarLink() {
+const NavigationBarLink = () => {
     const NavigationBarLinks = ['Home', 'Browse', 'Profile'];
 
     return (
