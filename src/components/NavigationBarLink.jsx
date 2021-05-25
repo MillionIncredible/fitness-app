@@ -48,11 +48,11 @@ const Div = styled.div`
 `;
 
 const NavigationBarLink = () => {
-    const NavigationBarLinks = ['Home', 'Browse', 'Profile'];
+    const navigationBarLinks = ['Home', 'Browse', 'Profile'];
 
     return (
-        NavigationBarLinks.map((navigationBarLink) => 
-            <Link to={navigationBarLink === 'Home' ? '/' : navigationBarLink === 'Browse' ? 'Browse' : 'Profile'}>
+        navigationBarLinks.map((navigationBarLink) => 
+            <Link to={navigationBarLink === 'Home' ? '/' : navigationBarLink === 'Browse' ? '/Browse' : '/Profile'}>
                 <Div>
                     <img
                         className={navigationBarLink === 'Home' || navigationBarLink === 'Browse' || navigationBarLink === 'Profile' ? `logo${navigationBarLink}` : undefined} 

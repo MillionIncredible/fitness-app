@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Browse from "./components/Browse";
 import Profile from "./components/Profile";
 import NavigationBar from "./components/NavigationBar";
+import Program from "./components/Program";
 
 import GlobalStyle from "./globalStyles";
 
@@ -15,9 +16,10 @@ const App = () => {
       <Route path="/" exact component={Home} />
       <Route path="/browse" component={Browse} />
       <Route path="/profile" component={Profile} />
+      <Route path="/program/:slug" component={Program} />
       <NavigationBar />
     </div>
   );
-}
+};
 
 export default App;
