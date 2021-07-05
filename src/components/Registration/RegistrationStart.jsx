@@ -15,10 +15,10 @@ const Div = styled.div`
     }
 
     .registrationLink {
-        display: flex;
-        align-items: center;
+        line-height: 45px;
+        display: block;
+        text-align: center;
         width: 143px;
-        height: 45px;
         border-radius: 50px;
         border-style: none;
         color: var(--color-white);
@@ -86,7 +86,7 @@ const RegistrationStart = () => {
     return (
         <Div>
             <img src={RegistrationImage} alt="WorkoutProgramm"/>
-            <Link className="registrationLink" to="/registrationStepOne">registrieren</Link>
+            <Link className="registrationLink" to="/registrationstepone">registrieren</Link>
             <Link className="loginLink" to="/login">oder anmelden</Link>
         </Div>)
     };

@@ -34,7 +34,6 @@ const Div = styled.div`
             background-color: var(--color-blue-dark);
             margin-top: 36px;
             font-size: 16px;
-            margin-top: 197px;
 
             &:hover {
                 cursor: pointer;
@@ -50,10 +49,9 @@ const Div = styled.div`
 
 const RegistrationStepOne = () => (
         <Div>
-            <p>Schön, dass du dabei bist!</p>
-            <p>Wie heißt du?</p>
-            <input type="text" placeholder="Dein Name" />
-            <Link className="continueLink" to="/registrationsteptwo">weiter</Link>
+            <p>Wunderbarer Name, verrätst du <br/> uns noch dein Geschlecht?</p>
+            <Link className="continueLink" to="/registrationstepthree">weiblich</Link>
+            <Link className="continueLink" to="/registrationstepthree">männlich</Link>
         </Div>
     );
 

@@ -10,6 +10,7 @@ import Registration from "./components/Registration/RegistrationStart";
 import Login from './components/Login/Login';
 import GlobalStyle from "./globalStyles";
 import RegistrationStepOne from './components/Registration/RegistrationStepOne';
+import RegistrationStepTwo from './components/Registration/RegistrationStepTwo';
 
 
 const App = () => {
@@ -24,7 +25,8 @@ const App = () => {
       <Route path="/profile" exact component={NavigationBar} />
       <Route path="/program/:slug" exact component={Program} />
       <Route path="/registration" exact component={Registration} />
-      <Route path="/registrationStepOne" exact component={RegistrationStepOne} />
+      <Route path="/registrationstepone" exact component={RegistrationStepOne} />
+      <Route path="/registrationsteptwo" exact component={RegistrationStepTwo} />
       <Route path="/login" exaxt component={Login} />
     </div>
   );
