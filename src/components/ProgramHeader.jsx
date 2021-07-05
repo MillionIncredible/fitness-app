@@ -54,10 +54,10 @@ const Div = styled.div`
 `;
 
 const ProgramHeader = props => {
-    const {programTitle} = props;
-    const {programFocus} = props;
-    const {programDifficulty} = props;
-    const {programDuration} = props;
+    const { programTitle } = props;
+    const { programFocus } = props;
+    const { programDifficulty } = props;
+    const { programDuration } = props;
 
     return (
         <Div>
@@ -66,15 +66,15 @@ const ProgramHeader = props => {
             </div>
             <div className="programTraits">
                 <div /* className="programFocus" */>
-                    <div className="circle"/>
+                    <div className="circle" />
                     <p>{programFocus}</p>
                 </div>
                 <div /* className="programDifficulty" */>
-                    <div className="circle"/>
+                    <div className="circle" />
                     <p>{programDifficulty}</p>
                 </div>
                 <div /* className="programDuration" */>
-                    <div className="circle"/>
+                    <div className="circle" />
                     <p>{programDuration} days</p>
                 </div>
             </div>

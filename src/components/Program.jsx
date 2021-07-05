@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 import React from "react";
@@ -33,40 +34,30 @@ const Program = (props) => {
     const programDifficulty = programBySlug[0].difficulty;
     const programDuration = programBySlug[0].duration;
     const programDescription = programBySlug[0].description === null ? 'Leider gibt es für das Programm noch keine Beschreibung, sorry!' : programBySlug[0].description;
-
-    /* Testing 
     const programWorkouts = programBySlug[0].workouts;
     let cardioCount = 0;
     let coordinationCount = 0;
     let mobilityCount = 0;
     let strengthCount = 0;
 
-    const programCategories = [];
+    const workoutsCategories = [];
     programWorkouts.forEach(programWorkout => {
-        programCategories.push(programWorkout.Workout.categories);
+        workoutsCategories.push(programWorkout.Workout.categories);
     });
 
-    // console.log(programCategories);
-
-    for (let i = 0; i < programCategories[i].length; i += 1) {
-        for (let j = 0; j < programCategories[i][j].length; j += 1) {
-            if (programCategories[i][j] === 'cardio') {
+    workoutsCategories.map(workoutCategories => {
+        workoutCategories.map(workoutCategorie => {
+            if (workoutCategorie === 'cardio') {
                 cardioCount += 1;
-            } else if (programCategories[i][j] === 'coordination') {
+            } else if (workoutCategorie === 'coordination') {
                 coordinationCount += 1;
-            } else if (programCategories[i][j] === 'mobility') {
+            } else if (workoutCategorie === 'mobility') {
                 mobilityCount += 1;
-            } else if (programCategories[i][j] === 'strength') {
+            } else if (workoutCategorie === 'strength') {
                 strengthCount += 1;
             }
-        }
-    }
-
-    console.log(cardioCount);
-    console.log(coordinationCount);
-    console.log(mobilityCount);
-    console.log(strengthCount);
-     Testing End */
+        });
+    });
 
     return (
         <Div>
@@ -79,7 +70,11 @@ const Program = (props) => {
             <div className="programDescriptionContainer">
                 <p>{programDescription}</p>
             </div>
-            <ProgramPieChart test={programTitle} />
+            <ProgramPieChart
+                cardioCount={cardioCount}
+                coordinationCount={coordinationCount}
+                mobilityCount={mobilityCount}
+                strengthCount={strengthCount} />
         </Div>
     );
 };
